@@ -1,0 +1,88 @@
+### create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Kevin Admin",
+    "email": "kepin@gmail.co.id",
+    "password": "123123",
+    "confPassword": "123123",
+    "role": "admin"
+}
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "userkedua",
+    "email": "userdua@gmail.co.id",
+    "password": "abcabc",
+    "confPassword": "abcabc",
+    "role": "user"
+}
+
+### get all users
+GET http://localhost:5000/users
+
+### get single user
+GET http://localhost:5000/users/0327bc95-bdd5-4912-bed6-d240110ce4b3
+
+### update user
+PATCH http://localhost:5000/users/0327bc95-bdd5-4912-bed6-d240110ce4b3
+Content-Type: application/json
+
+{
+    "name": "user1x",
+    "email": "user1update@gmail.co.id",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+### delete user
+DELETE  http://localhost:5000/users/e87d8322-aeb1-42d7-b680-5b0ed17c348a
+
+### Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "kepin@gmail.co.id",
+    "password": "123123"
+}
+
+### who am i
+GET http://localhost:5000/me
+
+### logout
+DELETE http://localhost:5000/logout
+
+### get all histories
+GET http://localhost:5000/generate
+
+### get history by id
+GET http://localhost:5000/generate/2d157219-d10e-41a7-acbd-d0a86b853bf4
+
+### create history
+POST http://localhost:5000/generate
+Content-Type: application/json
+
+{
+    "command": "a box of batman tumbler"
+}
+
+### delete history by id
+DELETE http://localhost:5000/generate/5fc97d6a-929e-4ca6-bcee-4a0b503f5136
+
+### generate images
+POST http://localhost:5000/generate/images
+Content-Type: application/json
+
+{
+    "message": "a rainbow t-rex swimming in the pond"
+}
+
+### generate variations
+POST http://localhost:5000/generate/variations
+Content-Type: multipart/form-data
