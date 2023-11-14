@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: url('../images/night.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-box {
+    color: #fff;
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #0ff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+    font-weight: 600;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -5px;
+    color: lime;
+}
+
+input:invalid~label {
+    color: #fff;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+    outline: none;
+}
+
+.inputbox .icons {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.register {
+    text-align: right;
+}
+
+.register p {
+    font-size: smaller;
+    color: #fff;
+}
+
+.register a {
+    color: #00ffae;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.form-box button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}

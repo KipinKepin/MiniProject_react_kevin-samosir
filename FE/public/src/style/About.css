@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background: #111;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+h1 {
+    position: relative;
+    bottom: 100px;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.scrolla,
+.scrollb,
+.scrollc,
+.scrolld,
+.scrolle {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.scrolla div {
+    white-space: nowrap;
+    animation: animate 20s linear infinite;
+    animation-delay: calc(20s*-1);
+}
+
+.scrollb div {
+    white-space: nowrap;
+    animation: animate 30s linear infinite;
+    animation-delay: calc(30s*-1);
+}
+
+.scrollc div {
+    white-space: nowrap;
+    animation: animate 10s linear infinite;
+    animation-delay: calc(10s*-1);
+}
+
+.scrolld div {
+    white-space: nowrap;
+    animation: animate 40s linear infinite;
+    animation-delay: calc(40s*-1);
+}
+
+.scrolle div {
+    white-space: nowrap;
+    animation: animate 25s linear infinite;
+    animation-delay: calc(25s*-1);
+}
+
+.scrolla div:nth-child(2) {
+    animation: animate2 20s linear infinite;
+    animation-delay: calc(20s/-2);
+}
+
+.scrollb div:nth-child(2) {
+    animation: animate2 30s linear infinite;
+    animation-delay: calc(30s/-2);
+}
+
+.scrollc div:nth-child(2) {
+    animation: animate2 10s linear infinite;
+    animation-delay: calc(10s/-2);
+}
+
+.scrolld div:nth-child(2) {
+    animation: animate2 40s linear infinite;
+    animation-delay: calc(40s/-2);
+}
+
+.scrolle div:nth-child(2) {
+    animation: animate2 25s linear infinite;
+    animation-delay: calc(25s/-2);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.scrolla div span,
+.scrollb div span,
+.scrollc div span,
+.scrolld div span {
+    display: inline-flex;
+    margin: 10px;
+    text-transform: uppercase;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: .5s;
+    letter-spacing: .2em;
+    font-weight: 600;
+}
+
+.scrolle div span {
+    display: inline-flex;
+    margin: 10px;
+    padding: 5px 10px;
+    transition: .5s;
+}
+
+.scrolla div span:hover,
+.scrollb div span:hover,
+.scrollc div span:hover,
+.scrolld div span:hover {
+    background: #4caf50;
+    cursor: pointer;
+}
+
+.imgbox img {
+    max-height: 100px;
+    scale: .8;
+    filter: grayscale(1);
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.imgbox img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
